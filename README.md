@@ -1,7 +1,7 @@
 # Web Camera Library
 jQuery and JavaScript based library for capture image from attached camera devices
 
-###Features
+#### Features
 * Camera invocation support for mobile: front and back
 * Switch camera support for mobile and iPad 
 * Support to select from the available camera for laptop and desktops
@@ -10,7 +10,7 @@ jQuery and JavaScript based library for capture image from attached camera devic
 * Custom class support for better designing
 * Callback function
 
-###Installation
+#### Installation
 1. Add jQuery in footer
     * `<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>`
 2. Add Library in footer
@@ -20,7 +20,7 @@ jQuery and JavaScript based library for capture image from attached camera devic
 4. Add Initializing script in footer
     * `<script>$('.image-capture').customWebCam()</script>`
     
-###Options
+#### Options
 | Option | Default | Description |
 | :---: | :---: | :---: |
 | videoClass | [] | This class applies to the video tag. |
