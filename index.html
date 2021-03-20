@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="webCamLib.css">
+    <title>Camera Library</title>
+</head>
+<body>
+
+<div class="image-capture"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="webCamLib.min.js"></script>
+
+<script type="text/javascript">
+    $('.image-capture').customWebCam({
+        videoClass: ['face-capture-video'],
+        canvasClass: ['face-capture-canvas'],
+        facingMode: "user",
+        captureTimeoutInSeconds: 0,
+        callbackFunction: 'setCapturedImage'
+    });
+
+    function setCapturedImage(imageBase64) {
+        $('body').append($('<img>', {src: imageBase64}));
+    }
+</script>
+</body>
+</html>
